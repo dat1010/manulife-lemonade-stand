@@ -1,7 +1,17 @@
-# manulife-lemonade-stand
+# Manulife Lemonade Stand
 
+## Table of Contents
+- [Setup](#setup)
+- [Bonus Sequence Diagram](#bonus-sequence-diagram)
+- [Improvements](#improvements)
+- [Assumptions Made](#assumptions-made)
 
-## Order Management Sequence Diagram
+## Setup
+<!-- Add your setup instructions here -->
+
+## Bonus Sequence Diagram
+
+### Order Management Sequence Diagram
 
 ```mermaid
 sequenceDiagram
@@ -30,3 +40,9 @@ sequenceDiagram
     BackendAPI ->> WebApp: Notify Update
     WebApp -->> Customer: Update Lemonade Types and Sizes Display
 ```
+
+## Improvements
+<!-- Add the assumptions you made here -->
+
+## Assumptions Made
+<!-- Add the assumptions you made here -->
