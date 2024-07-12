@@ -138,3 +138,7 @@
 /Users/davidtannerjr./Documents/programming/dotnet/LemonadeStand/backend/bin/Debug/net8.0/runtimes/win/lib/net6.0/System.Security.Cryptography.ProtectedData.dll
 /Users/davidtannerjr./Documents/programming/dotnet/LemonadeStand/backend/bin/Debug/net8.0/runtimes/win/lib/net6.0/System.Windows.Extensions.dll
 /Users/davidtannerjr./Documents/programming/dotnet/LemonadeStand/backend/obj/Debug/net8.0/LemonadeStandApi.sourcelink.json
+/Users/davidtannerjr./Documents/programming/dotnet/LemonadeStand/backend/bin/Debug/net8.0/Carter.dll
+/Users/davidtannerjr./Documents/programming/dotnet/LemonadeStand/backend/bin/Debug/net8.0/Carter.Analyzers.dll
+/Users/davidtannerjr./Documents/programming/dotnet/LemonadeStand/backend/bin/Debug/net8.0/FluentValidation.dll
+/Users/davidtannerjr./Documents/programming/dotnet/LemonadeStand/backend/bin/Debug/net8.0/Microsoft.EntityFrameworkCore.InMemory.dll
