@@ -20,6 +20,9 @@ public class Product
     [StringLength(50)]
     public string Size { get; set; }
 
+    [Required]
+    public decimal Price { get; set; } 
+
     public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
 
     public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;

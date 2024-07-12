@@ -4,6 +4,7 @@ using LemonadeStandApi.Repo;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace LemonadeStandApi.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240712153623_AddCustomerOrderOrderItem")]
+    partial class AddCustomerOrderOrderItem
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -144,48 +147,6 @@ namespace LemonadeStandApi.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Product", (string)null);
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            CreatedAt = new DateTime(2024, 7, 12, 15, 40, 32, 526, DateTimeKind.Utc),
-                            Name = "Lemonade",
-                            Price = 1.00m,
-                            Size = "Regular",
-                            Type = "Drink",
-                            UpdatedAt = new DateTime(2024, 7, 12, 15, 40, 32, 526, DateTimeKind.Utc)
-                        },
-                        new
-                        {
-                            Id = 2,
-                            CreatedAt = new DateTime(2024, 7, 12, 15, 40, 32, 526, DateTimeKind.Utc),
-                            Name = "Pink Lemonade",
-                            Price = 1.00m,
-                            Size = "Regular",
-                            Type = "Drink",
-                            UpdatedAt = new DateTime(2024, 7, 12, 15, 40, 32, 526, DateTimeKind.Utc)
-                        },
-                        new
-                        {
-                            Id = 3,
-                            CreatedAt = new DateTime(2024, 7, 12, 15, 40, 32, 526, DateTimeKind.Utc),
-                            Name = "Lemonade",
-                            Price = 1.50m,
-                            Size = "Large",
-                            Type = "Drink",
-                            UpdatedAt = new DateTime(2024, 7, 12, 15, 40, 32, 526, DateTimeKind.Utc)
-                        },
-                        new
-                        {
-                            Id = 4,
-                            CreatedAt = new DateTime(2024, 7, 12, 15, 40, 32, 526, DateTimeKind.Utc).AddTicks(10),
-                            Name = "Pink Lemonade",
-                            Price = 1.50m,
-                            Size = "Large",
-                            Type = "Drink",
-                            UpdatedAt = new DateTime(2024, 7, 12, 15, 40, 32, 526, DateTimeKind.Utc).AddTicks(10)
-                        });
                 });
 
             modelBuilder.Entity("LemonadeStandApi.Models.Order", b =>

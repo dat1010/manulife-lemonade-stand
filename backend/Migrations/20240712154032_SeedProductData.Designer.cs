@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace LemonadeStandApi.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20240711210335_UpdateProductSchema")]
-    partial class UpdateProductSchema
+    [Migration("20240712154032_SeedProductData")]
+    partial class SeedProductData
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -128,6 +128,9 @@ namespace LemonadeStandApi.Migrations
                         .HasMaxLength(255)
                         .HasColumnType("nvarchar(255)");
 
+                    b.Property<decimal>("Price")
+                        .HasColumnType("decimal(18,2)");
+
                     b.Property<string>("Size")
                         .IsRequired()
                         .HasMaxLength(50)
@@ -144,6 +147,48 @@ namespace LemonadeStandApi.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Product", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            CreatedAt = new DateTime(2024, 7, 12, 15, 40, 32, 526, DateTimeKind.Utc),
+                            Name = "Lemonade",
+                            Price = 1.00m,
+                            Size = "Regular",
+                            Type = "Lemonade",
+                            UpdatedAt = new DateTime(2024, 7, 12, 15, 40, 32, 526, DateTimeKind.Utc)
+                        },
+                        new
+                        {
+                            Id = 2,
+                            CreatedAt = new DateTime(2024, 7, 12, 15, 40, 32, 526, DateTimeKind.Utc),
+                            Name = "Pink Lemonade",
+                            Price = 1.00m,
+                            Size = "Regular",
+                            Type = "Pink Lemonade",
+                            UpdatedAt = new DateTime(2024, 7, 12, 15, 40, 32, 526, DateTimeKind.Utc)
+                        },
+                        new
+                        {
+                            Id = 3,
+                            CreatedAt = new DateTime(2024, 7, 12, 15, 40, 32, 526, DateTimeKind.Utc),
+                            Name = "Lemonade",
+                            Price = 1.50m,
+                            Size = "Large",
+                            Type = "Lemponade",
+                            UpdatedAt = new DateTime(2024, 7, 12, 15, 40, 32, 526, DateTimeKind.Utc)
+                        },
+                        new
+                        {
+                            Id = 4,
+                            CreatedAt = new DateTime(2024, 7, 12, 15, 40, 32, 526, DateTimeKind.Utc).AddTicks(10),
+                            Name = "Pink Lemonade",
+                            Price = 1.50m,
+                            Size = "Large",
+                            Type = "Pink Lemonade",
+                            UpdatedAt = new DateTime(2024, 7, 12, 15, 40, 32, 526, DateTimeKind.Utc).AddTicks(10)
+                        });
                 });
 
             modelBuilder.Entity("LemonadeStandApi.Models.Order", b =>
