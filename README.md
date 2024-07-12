@@ -33,25 +33,24 @@ sequenceDiagram
     participant BackendAPI
     participant DataStore
 
-    Customer ->> WebApp: View Lemonade Types and Sizes
-    WebApp ->> BackendAPI: Fetch Lemonade Types and Sizes
-    BackendAPI ->> DataStore: Get Lemonade Types and Sizes
-    DataStore -->> BackendAPI: Return Lemonade Types and Sizes
-    BackendAPI -->> WebApp: Return Lemonade Types and Sizes
-    WebApp -->> Customer: Display Lemonade Types and Sizes
+    Customer ->> WebApp: View Lemonade Types, Sized and Quantity
+    WebApp ->> BackendAPI: Fetch Products
+    BackendAPI ->> DataStore: Select Products from database table
+    DataStore -->> BackendAPI: Return Products
+    BackendAPI -->> WebApp: Return Lemonade Product
+    WebApp -->> Customer: Display Lemonade 
 
-    Customer ->> WebApp: Select Lemonade Type and Size
-    Customer ->> WebApp: Enter Personal Information
-    WebApp ->> BackendAPI: Submit Order (Lemonade Type, Size, Personal Info)
+    Customer ->> WebApp: Select Lemonade Type, Size and Quantity
+    Customer ->> WebApp: Enter Personal Information(Name, email or phone)
+    WebApp ->> BackendAPI: Submit Order (POST create customer, order and orderitems)
     BackendAPI ->> DataStore: Save Order
     DataStore -->> BackendAPI: Confirm Order Saved
     BackendAPI -->> WebApp: Return Order Number
     WebApp -->> Customer: Display Order Number
 
-    BackendAPI ->> DataStore: Update Lemonade Types and Sizes (Admin Action)
+    BackendAPI ->> DataStore: PUT to /api/products/{id}
     DataStore -->> BackendAPI: Confirm Update
-    BackendAPI ->> WebApp: Notify Update
-    WebApp -->> Customer: Update Lemonade Types and Sizes Display
+    WebApp -->> Customer: Refresh page for updated products
 ```
 
 ## Improvements
