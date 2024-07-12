@@ -1,6 +1,9 @@
 # manulife-lemonade-stand
 
 
+## Order Management Sequence Diagram
+
+```mermaid
 sequenceDiagram
     participant Customer
     participant WebApp
@@ -26,4 +29,4 @@ sequenceDiagram
     DataStore -->> BackendAPI: Confirm Update
     BackendAPI ->> WebApp: Notify Update
     WebApp -->> Customer: Update Lemonade Types and Sizes Display
-
+```
