@@ -25,7 +25,7 @@ dotnet ef database update
 3. After docker-compose
 
 You can then visit `http://localhost:3000/` for the frontend
-and `http://localhost:5001/swagger/index.html` for the backend swagger docks
+and `http://localhost:5001/swagger/index.html` for the backend swagger docs.
 
 ## Bonus Sequence Diagram
 

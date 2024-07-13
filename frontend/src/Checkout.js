@@ -100,11 +100,11 @@ const Checkout = () => {
           </div>
           <div className="form-group">
             <label>Email:</label>
-            <input type="text" value={email} onChange={(e) => setEmail(e.target.value)} required />
+            <input type="text" value={email} onChange={(e) => setEmail(e.target.value)} />
           </div>
           <div className="form-group">
             <label>Phone:</label>
-            <input type="text" value={phoneNumber} onChange={(e) => setPhone(e.target.value)} required />
+            <input type="text" value={phoneNumber} onChange={(e) => setPhone(e.target.value)} />
           </div>
           <button className="order-now" type="submit" disabled={loading}>{loading ? 'Processing...' : 'Submit Order'}</button>
         </form>
