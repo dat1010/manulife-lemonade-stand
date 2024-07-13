@@ -64,6 +64,7 @@ sequenceDiagram
 2. I used Carter to help create the endpoints instead of putting them in the `Project.cs` file directly, but it's not common practice to have the DB context referenced in your endpoints. With more time, I would implement the repository pattern and use service classes for Product, Customer, Order, and OrderItem.
 3. In order to create the customer and order, I am calling multiple RESTful endpoints: `api/customer`, `api/order`, `api/orderitem`. If one of these fails, there is no transaction to roll back the data. I would either create an endpoint that handles this in the backend or update the frontend to clean up after one or more fail.
 4. Creating Request and Response objects for all resources.
+5. Use FluentValidation on Services.
 
 ## Assumptions Made
 
