@@ -14,7 +14,6 @@ const Checkout = () => {
     setLoading(true);
 
     try {
-      // 1. Create customer
       const customerRes = await fetch('http://localhost:5001/api/customers', {
         method: 'POST',
         headers: {
@@ -30,7 +29,6 @@ const Checkout = () => {
       const customerData = await customerRes.json();
       const customerId = customerData.id;
 
-       // 2. Create order
       const orderDate = new Date().toISOString();
       const createdAt = orderDate;
       const updatedAt = orderDate;
@@ -50,7 +48,6 @@ const Checkout = () => {
       const orderData = await orderRes.json();
       const orderId = orderData.id;
 
-      // 3. Create order items
       for (const item of orderItems) {
         const orderItemRes = await fetch('http://localhost:5001/api/orderitems', {
           method: 'POST',

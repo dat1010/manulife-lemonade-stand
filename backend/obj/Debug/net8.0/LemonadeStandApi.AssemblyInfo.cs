@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LemonadeStandApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a993543da918e3db0757e0b427ff91e6541fa398")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+39a37de6929535872fa1ffd955fbe905d376e3ad")]
 [assembly: System.Reflection.AssemblyProductAttribute("LemonadeStandApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LemonadeStandApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,7 +1,6 @@
 namespace LemonadeStandApi.Models;
 
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 
 public class Customer
 {
