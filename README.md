@@ -58,6 +58,8 @@ sequenceDiagram
 1. There were no mockups for the checkout page, so I would spend more time making it look closer to the root page.
 2. I used Carter to help create the endpoints instead of putting them in the `Project.cs` file directly, but it's not common practice to have the DB context referenced in your endpoints. With more time, I would implement the repository pattern and use service classes for Product, Customer, Order, and OrderItem.
 3. In order to create the customer and order, I am calling multiple RESTful endpoints: `api/customer`, `api/order`, `api/orderitem`. If one of these fails, there is no transaction to roll back the data. I would either create an endpoint that handles this in the backend or update the frontend to clean up after one or more fail.
+4. Better .gitignore there is some folders that shouldn't need pushed to git like `node_modules` in the frontend and `obj` and `bin` in the backend.
+
 
 ## Assumptions Made
 
